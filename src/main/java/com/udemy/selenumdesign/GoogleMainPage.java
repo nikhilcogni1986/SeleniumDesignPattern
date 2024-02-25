@@ -14,4 +14,17 @@ public class GoogleMainPage
         this.searchWidget = PageFactory.initElements(driver, searchWidget.getClass());
         this.searchSuggestion = PageFactory.initElements(driver, searchSuggestion.getClass());
     }
+
+    public SearchWidget getSearchWidget() {
+        return searchWidget;
+    }
+
+    public SearchSuggestion getSearchSuggestion() {
+        return searchSuggestion;
+    }
+
+    public void goTo()
+    {
+        driver.get("http://www.google.com");
+    }
 }
