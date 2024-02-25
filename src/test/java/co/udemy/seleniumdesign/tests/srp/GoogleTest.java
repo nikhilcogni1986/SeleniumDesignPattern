@@ -6,6 +6,7 @@ import com.udemy.selenumdesign.GoogleResultsPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class GoogleTest extends BaseTest
@@ -20,11 +21,8 @@ public class GoogleTest extends BaseTest
         googleResultsPage = new GoogleResultsPage(driver);
     }
 
-    @Test
-    public void googleWorkflow() throws InterruptedException {
-
-        String keyword = "Selenium Webdriver";
-        int index = 3;
+    @Test(dataProvider = "getSearchData")
+    public void googleWorkflow(String keyword, int index) throws InterruptedException {
 
         googleMainPage.goTo();
         googleMainPage.getSearchWidget().clickAccept();
@@ -41,5 +39,14 @@ public class GoogleTest extends BaseTest
         Assert.assertTrue(googleResultsPage.getSearchSuggestion().isDisplayed());
         googleResultsPage.getSearchSuggestion().clickSuggestionsByIndex(index);
         System.out.println(googleResultsPage.getResultStats().getStats());
+    }
+
+    @DataProvider
+    public Object[][] getSearchData()
+    {
+        return new Object[][] {
+                {"Selenium Webdriver",3},
+                {"Docker",3}
+        };
     }
 }

@@ -1,6 +1,7 @@
 package com.udemy.selenumdesign;
 
 import com.google.common.util.concurrent.Uninterruptibles;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,8 +21,19 @@ public class SearchWidget extends AbstractComponent
     private WebElement btnAcceptAll;
 
     public void clickAccept() throws InterruptedException {
-        Thread.sleep(3000);
-        this.btnAcceptAll.click();
+        Thread.sleep(2000);
+        try
+        {
+            if(this.btnAcceptAll.isDisplayed()) {
+                System.out.println("Element is present and displayed");
+                this.btnAcceptAll.click();
+            }
+            else
+                System.out.println("Element is present but not displayed");
+        }
+        catch (NoSuchElementException e) {
+            System.out.println("Element is not present, hence not displayed");
+        }
     }
 
     public void enter(String keyword)
