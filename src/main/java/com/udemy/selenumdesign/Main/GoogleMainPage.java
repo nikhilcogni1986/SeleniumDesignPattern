@@ -1,9 +1,8 @@
-package com.udemy.selenumdesign;
+package com.udemy.selenumdesign.Main;
 
+import com.udemy.selenumdesign.Common.SearchSuggestion;
+import com.udemy.selenumdesign.Common.SearchWidget;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class GoogleMainPage
 {

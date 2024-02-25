@@ -1,4 +1,4 @@
-package com.udemy.selenumdesign;
+package com.udemy.selenumdesign.Common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
