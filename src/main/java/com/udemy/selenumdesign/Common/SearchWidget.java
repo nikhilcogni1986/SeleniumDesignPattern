@@ -43,7 +43,7 @@ public class SearchWidget extends AbstractComponent
         }
     }
 
-    SearchWidget(final WebDriver driver)
+    public SearchWidget(final WebDriver driver)
     {
         super(driver);
     }

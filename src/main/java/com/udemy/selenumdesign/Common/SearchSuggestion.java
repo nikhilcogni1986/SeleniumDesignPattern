@@ -1,6 +1,5 @@
 package com.udemy.selenumdesign.Common;
 
-import com.udemy.selenumdesign.Common.AbstractComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
