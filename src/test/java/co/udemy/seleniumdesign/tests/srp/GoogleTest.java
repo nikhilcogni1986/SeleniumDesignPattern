@@ -22,8 +22,24 @@ public class GoogleTest extends BaseTest
 
     @Test
     public void googleWorkflow() throws InterruptedException {
+
+        String keyword = "Selenium Webdriver";
+        int index = 3;
+
         googleMainPage.goTo();
         googleMainPage.getSearchWidget().clickAccept();
         Assert.assertTrue(googleMainPage.getSearchWidget().isDisplayed());
+
+        //Enter the keyword
+        googleMainPage.getSearchWidget().enter(keyword);
+        Assert.assertTrue(googleMainPage.getSearchSuggestion().isDisplayed());
+        googleMainPage.getSearchSuggestion().clickSuggestionsByIndex(index);
+        googleResultsPage.getNavigationBar().isDisplayed();
+
+        //Enter the keyword
+        googleResultsPage.getSearchWidget().enter(keyword);
+        Assert.assertTrue(googleResultsPage.getSearchSuggestion().isDisplayed());
+        googleResultsPage.getSearchSuggestion().clickSuggestionsByIndex(index);
+        System.out.println(googleResultsPage.getResultStats().getStats());
     }
 }

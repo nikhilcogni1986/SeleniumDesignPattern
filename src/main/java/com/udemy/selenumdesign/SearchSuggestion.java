@@ -16,6 +16,11 @@ public class SearchSuggestion extends AbstractComponent
         super(driver);
     }
 
+    public void clickSuggestionsByIndex(int index)
+    {
+        this.suggestions.get(index).click();
+    }
+
     @Override
     public boolean isDisplayed() {
         return this.wait.until((d)-> this.suggestions.size() > 5);

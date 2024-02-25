@@ -1,5 +1,6 @@
 package com.udemy.selenumdesign;
 
+import com.google.common.util.concurrent.Uninterruptibles;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,7 +27,11 @@ public class SearchWidget extends AbstractComponent
     public void enter(String keyword)
     {
         this.searchBox.clear();
-        this.searchBox.sendKeys(keyword);
+        for(char ch: keyword.toCharArray())
+        {
+            Uninterruptibles.sleepUninterruptibly(Duration.ofMillis(20));
+            this.searchBox.sendKeys(ch+"");
+        }
     }
 
     SearchWidget(final WebDriver driver)
