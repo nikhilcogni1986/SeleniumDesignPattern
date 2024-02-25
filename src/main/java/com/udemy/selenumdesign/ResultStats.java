@@ -13,8 +13,12 @@ public class ResultStats extends AbstractComponent
     @FindBy(id="result-stats")
     private WebElement stats;
 
+    public String getStats()
+    {
+        return this.stats.getText();
+    }
     @Override
     public boolean isDisplayed() {
-        return wait.until((d)-> this.stats.isDisplayed());
+        return this.wait.until((d)-> this.stats.isDisplayed());
     }
 }

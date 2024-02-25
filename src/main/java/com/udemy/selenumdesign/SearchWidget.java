@@ -12,10 +12,22 @@ import java.time.Duration;
 
 public class SearchWidget extends AbstractComponent
 {
-    private WebDriverWait wait;
-
     @FindBy(name = "q")
     private WebElement searchBox;
+
+    @FindBy(xpath = "//button[@id='L2AGLb']/div")
+    private WebElement btnAcceptAll;
+
+    public void clickAccept() throws InterruptedException {
+        Thread.sleep(3000);
+        this.btnAcceptAll.click();
+    }
+
+    public void enter(String keyword)
+    {
+        this.searchBox.clear();
+        this.searchBox.sendKeys(keyword);
+    }
 
     SearchWidget(final WebDriver driver)
     {
@@ -23,7 +35,6 @@ public class SearchWidget extends AbstractComponent
     }
     @Override
     public boolean isDisplayed() {
-        wait.until(ExpectedConditions.visibilityOf(searchBox));
-        return this.searchBox.isDisplayed();
+        return this.wait.until((d) ->this.searchBox.isDisplayed());
     }
 }

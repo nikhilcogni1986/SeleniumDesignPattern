@@ -8,9 +8,11 @@ public class GoogleResultsPage
     private NavigationBar navigationBar;
     private SearchWidget searchWidget;
     private ResultStats resultStats;
+    protected WebDriver driver;
 
     public GoogleResultsPage(final WebDriver driver)
     {
+        this.driver = driver;
         this.searchWidget = new SearchWidget(driver);
         this.searchSuggestion = new SearchSuggestion(driver);
         this.navigationBar = new NavigationBar(driver);

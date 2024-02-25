@@ -32,6 +32,6 @@ public class NavigationBar extends AbstractComponent
     @Override
     public boolean isDisplayed()
     {
-        return wait.until((d)-> bar.isDisplayed());
+        return this.wait.until((d)-> bar.isDisplayed());
     }
 }
