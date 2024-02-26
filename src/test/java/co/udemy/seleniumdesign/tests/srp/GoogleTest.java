@@ -1,8 +1,8 @@
 package co.udemy.seleniumdesign.tests.srp;
 
 import co.udemy.seleniumdesign.tests.BaseTest;
-import com.udemy.selenumdesign.Main.GoogleMainPage;
-import com.udemy.selenumdesign.Result.GoogleResultsPage;
+import com.udemy.selenumdesign.srp.Main.GoogleMainPage;
+import com.udemy.selenumdesign.srp.Result.GoogleResultsPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;

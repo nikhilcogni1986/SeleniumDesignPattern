@@ -1,7 +1,7 @@
-package com.udemy.selenumdesign.Result;
+package com.udemy.selenumdesign.srp.Result;
 
-import com.udemy.selenumdesign.Common.SearchSuggestion;
-import com.udemy.selenumdesign.Common.SearchWidget;
+import com.udemy.selenumdesign.srp.Common.SearchSuggestion;
+import com.udemy.selenumdesign.srp.Common.SearchWidget;
 import org.openqa.selenium.WebDriver;
 
 public class GoogleResultsPage

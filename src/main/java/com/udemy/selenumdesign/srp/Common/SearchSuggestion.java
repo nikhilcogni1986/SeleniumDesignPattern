@@ -1,4 +1,4 @@
-package com.udemy.selenumdesign.Common;
+package com.udemy.selenumdesign.srp.Common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,7 +1,6 @@
-package com.udemy.selenumdesign.Common;
+package com.udemy.selenumdesign.srp.Common;
 
 import com.google.common.util.concurrent.Uninterruptibles;
-import com.udemy.selenumdesign.Common.AbstractComponent;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
